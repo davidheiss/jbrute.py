@@ -36,10 +36,10 @@ if __name__ == "__main__":
         description="Brute-force login form authentication for Joomla",
         formatter_class=RawTextHelpFormatter,
         epilog="""Examples:           
-    python main.py http://joomla.local/administrator/index.php -u admin -p 123456 -t1
-    python main.py http://joomla.local/administrator/index.php -u admin -P rockyou.txt
-    python main.py http://joomla.local/administrator/index.php -U users.txt -p 123456
-    python main.py http://joomla.local/administrator/index.php -U users.txt -P passwords.txt
+    python jbrute.py http://joomla.local/administrator/index.php -u admin -p 123456 -t1
+    python jbrute.py http://joomla.local/administrator/index.php -u admin -P rockyou.txt
+    python jbrute.py http://joomla.local/administrator/index.php -U users.txt -p 123456
+    python jbrute.py http://joomla.local/administrator/index.php -U users.txt -P passwords.txt
     """,
     )
 
