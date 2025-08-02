@@ -1,0 +1,13 @@
+[project]
+name = "JBrute"
+version = "0.1.0"
+description = "Brute-force login form authentication for Joomla"
+requires-python = ">=3.7"
+dependencies = [
+  "requests",
+  "parsel",
+  "tqdm"
+]
+
+[project.scripts]
+jbrute = "jbrute:main"

